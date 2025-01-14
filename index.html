@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vidéo avec transparence</title>
+    <style>
+        body {
+            background-color: #000; /* Couleur de fond de la page */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .video-container {
+            position: relative;
+            width: 500px; /* Largeur de la vidéo */
+            height: 500px; /* Hauteur de la vidéo */
+        }
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none; /* Empêche l'interaction avec la vidéo */
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <video id="video" autoplay muted playsinline>
+            <source src="loading-bar-animation.webm" type="video/webm">
+            Votre navigateur ne supporte pas la vidéo avec transparence.
+        </video>
+    </div>
+
+    <script>
+        // Sélectionne la vidéo
+        const video = document.getElementById('video');
+
+        // Écoute l'événement "ended"
+        video.addEventListener('ended', () => {
+            // Redirection vers une autre page
+            window.location.href = './hero/'; // Remplacez par votre URL
+        });
+    </script>
+</body>
+</html>

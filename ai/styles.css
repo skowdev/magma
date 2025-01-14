@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Sharp Grotesk";
+  background: #e7e4e5;
+  overflow: hidden;
+}
+nav {
+  background-color: #00A877;
+}
+.loader {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  pointer-events: none;
+}
+
+.loader-imgs {
+  width: 150%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 50px;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.img {
+  position: relative;
+  flex: 1;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+nav {
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  font-family: "Neue Montreal";
+}
+
+.nav-item {
+  position: relative;
+  flex: 1;
+}
+
+.nav-item:nth-child(2) {
+  text-align: center;
+  font-family: "PP Editorial Old";
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.nav-item:nth-child(3) {
+  text-align: right;
+}
+
+#logo a {
+  text-transform: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  font-family: "Bebas Neue", serif;
+  font-weight: 400;
+}
+.title {
+  font-family: 'Bebas Neue', cursive;
+}
+.table {
+  font-family: 'Bebas Neue', cursive;
+  align-items: center;
+  border: 2px solid black;
+  text-align: center;
+}
+.matrix-animation {
+  color: #00A877!important;
+}
+.main {
+  padding: 10px;
+  display: block;
+  position: relative;
+  align-items: center;
+}
+
+.desc {
+  color: green;
+  display: block;
+  text-align: center;
+  position: relative;
+  top: 20px;
+}
+
+.main p span {
+  display: flex;
+  letter-spacing: 1px;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.matrix-animation {
+  font-family: monospace;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.hero {
+  width: 100%;
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  font-family: "PP Migra";
+  display: flex;
+  flex-direction: row;
+  color: #00A877;
+}
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+  .prblm {
+    display: none!important;
+  }
+}
+#leaderboard {
+  width: 80%;
+  margin: 20px auto;
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#leaderboard h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+}
+
+#leaderboard-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#leaderboard-list li {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #555;
+}
+.h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 4vw;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+h1 {
+  position: relative;
+  font-weight: 400;
+  line-height: 85%;
+}
+
+h1 span {
+  font-family: "Sharp Grotesk";
+  font-weight: 700;
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.item {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+/* Styles de base */
+#chat-box {
+  width: 50%;
+  height: 400px;
+  margin: 0 auto;
+  background: transparent;
+  border: 1px solid #00A877;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0; /* Caché au départ */
+  transform: translateY(100px); /* Position initiale pour l'animation */
+}
+
+#chat-window {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+#chat-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: "VT323", serif;
+}
+
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #1a1a1a;
+  z-index: -1;
+}
+
+.message {
+  max-width: 70%;
+  padding: 10px;
+  border-radius: 10px;
+  word-wrap: break-word;
+  font-family: "VT323", serif;
+}
+
+.message.user {
+  align-self: flex-end;
+  background: #007bff;
+  color: #fff;
+  text-align: right;
+}
+
+.message.bot {
+  align-self: flex-start;
+  background: #00A877;
+  color: #000;
+}
+
+#chat-form {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  border-top: 1px solid #00A877;
+}
+
+#user-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #00A877;
+  border-radius: 5px;
+  background-color: #00A877;
+}
+
+button {
+  padding: 10px 20px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

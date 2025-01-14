@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@font-face {
+  font-family: 'Axis';
+  src: url('./Axis.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::selection {
+  color: #fff;
+  background: transparent;
+}
+.button {
+  background-color: rgb(248, 248, 248);
+  padding: 10px;
+  border-radius: 20px;
+}
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url("./wp7448150.jpg");
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.site-content {
+  position: absolute;
+}
+
+.nav,
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+}
+
+.links {
+  display: flex;
+  gap: 2em;
+}
+
+a {
+  text-decoration: none;
+  color: #00A877;
+  font-family: "Bebas Neue", serif;
+  font-weight: 400;
+  pointer-events: auto;
+  
+}
+
+.logo a {
+  font-family: "Bebas Neue", serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.hero-copy {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.hero-copy h1 {
+  font-size: 8vw;
+  color: #00A877;
+  font-family: "Axis";
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.hero-copy p {
+  font-size: 2vw;
+  color: #fff;
+  font-family: "Neue Montreal";
+  margin: 0.5em 0;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
